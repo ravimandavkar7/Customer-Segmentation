@@ -18,5 +18,12 @@ if st.button("Predict Segment"):
     data = np.array([[income, spending]])
     data_scaled = scaler.transform(data)
     cluster = model.predict(data_scaled)
+    
+    labels = {
+    0: "Low Income - Low Spending",
+    1: "High Value Customer",
+    2: "Medium Customer",
+    3: "Low Value Customer"
+     }
 
-    st.success(f"Customer belongs to Segment: {cluster[0]}")
+    st.success(f"Customer Segment: {labels[cluster[0]]}")
