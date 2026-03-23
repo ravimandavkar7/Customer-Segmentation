@@ -23,7 +23,8 @@ if st.button("Predict Segment"):
     0: "Low Income - Low Spending",
     1: "High Value Customer",
     2: "Medium Customer",
-    3: "Low Value Customer"
+    3: "Low Value Customer",
+    4: "Very High Value"	
      }
 
     st.success(f"Customer Segment: {labels[cluster[0]]}")
